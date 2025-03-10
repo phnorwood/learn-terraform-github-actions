@@ -14,8 +14,9 @@ terraform {
   }
   required_version = ">= 1.1.0"
 
+  // include hcp terraform organization information
   cloud {
-    organization = "REPLACE_ME"
+    organization = "phnorwood"
 
     workspaces {
       name = "gh-actions-demo"
@@ -23,8 +24,9 @@ terraform {
   }
 }
 
+// define target aws region
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-2"
 }
 
 resource "random_pet" "sg" {}
