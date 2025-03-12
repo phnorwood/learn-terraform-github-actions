@@ -57,7 +57,7 @@ resource "aws_instance" "web" {
               apt-get update
               apt-get install -y apache2
               sed -i -e 's/80/8080/' /etc/apache2/ports.conf
-              echo "Hello World!<br/>This page was deployed using Terraform + GitHub Actions (<em>learn-terraform-github-actions</em>)" > /var/www/html/index.html
+              echo "Hello World! #learn-terraform-github-actions" > /var/www/html/index.html
               systemctl restart apache2
               EOF
 }
